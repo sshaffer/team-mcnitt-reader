@@ -6,6 +6,6 @@ services:
     container_name: blogger-bot
     restart: unless-stopped
     volumes:
-      - blogger_data:/app/data
+      - /volume1/docker/blogger_data:/app/data:rw
 volumes:
   blogger_data:
