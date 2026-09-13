@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  blogger-notifier:
+    build: .
+    container_name: blogger-bot
+    restart: unless-stopped
+    volumes:
+      - blogger_data:/app/data
+volumes:
+  blogger_data:

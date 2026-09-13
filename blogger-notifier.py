@@ -10,10 +10,10 @@ from dotenv import load_dotenv
 
 # --- CONFIGURATION ---
 BLOG_RSS_URL = "https://mcnittsminions.blogspot.com/feeds/posts/default"
-DB_FILE = "blogger_posts.db"
 
-# Date Filter: Only check posts published on or after this date (Year, Month, Day, Hour, Minute)
-#START_DATE = datetime(2026, 8, 31, 0, 0, 0)
+DATA_DIR = "/app/data"
+os.makedirs(DATA_DIR, exist_ok=True)
+DB_FILE = os.path.join(DATA_DIR, "blogger_posts.db")
 
 # Email Configuration
 SMTP_SERVER = "smtp.gmail.com"
